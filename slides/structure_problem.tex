@@ -1,0 +1,27 @@
+\begin{frame}
+  \frametitle{The structure problem (S)}
+
+  \linespread{1.5}
+  \begin{itemize}
+  \item
+    Equation:
+    \begin{equation*}
+      \rhoS\ddotUS - \DivSigmaSU =  \fS \quad \textrm{in}\;
+      \OS\times (0,T]
+    \end{equation*}
+  \item
+    Boundary conditions:
+    \begin{equation*}
+      \begin{array}{rlll}
+        \US(\cdot, 0) &\;=& \US^0&\quad \textrm{in}\;\OS \\
+        \PS(\cdot, 0) &\;=& \PS^0&\quad \textrm{in}\;\OS \\
+        \US &\;=& G_{_{S,D}}&\quad \textrm{on}\;\GammaSD \\
+        \SigmaS \cdot \NS &\;=& G_{_{S,N}}&\quad \textrm{on}\;\GammaSN \\
+        (\SigmaS - \JM \SigmaF\cdot\FM^{-\top})\cdot \NS &\alert<2>{=}&0
+        &\quad \textrm{on}\;\GammaFS \\
+      \end{array}
+    \end{equation*}
+  \end{itemize}
+  \linespread{1.0}
+
+\end{frame}

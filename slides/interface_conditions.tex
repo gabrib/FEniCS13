@@ -1,0 +1,29 @@
+\begin{frame}
+  \frametitle{Interface conditions}
+
+\begin{figure}[htbp]
+  \def\svgwidth{0.3\columnwidth}
+  \input{pdf/fsi_interface.pdf_tex}
+\end{figure}
+  
+  \begin{itemize}[<+->]
+ \item
+  Stress continuity:
+  \begin{equation*}
+    \sigmaS \cdot n = \sigmaF \cdot n
+    \quad \text{ on } \gammaFS
+  \end{equation*}
+ \item
+  Kinematic continuity:
+  \begin{equation*} 
+    \uF = \uS
+    \quad \text{ on } \gammaFS
+   \end{equation*}
+ \item
+  Domain continuity:
+  \begin{equation*}
+    \dM = \dStruc
+    \quad \text{ on } \gammaFS
+  \end{equation*}
+\end{itemize}
+\end{frame}

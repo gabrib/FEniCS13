@@ -1,0 +1,34 @@
+\begin{frame}
+  \frametitle{Summary: How to use the automatic derivative to solve FSI problems}
+
+ \begin{columns}
+  \begin{column}{0.6\textwidth}
+  \begin{itemize}
+  \item
+    Map the fluid equation to the reference domain
+  \item<2->
+    Impose essential BC's using Lagrange multipliers
+  \item<3->
+    Let the automatic derivative compute the Jacobian 
+  \end{itemize}
+\end{column}
+    \begin{column}{0.4\textwidth}
+     \includegraphics[width=\textwidth,angle=90]{png/bloodvessel40.png}
+    \end{column}  
+  \vspace{1cm}
+\end{columns}
+
+\uncover<4->{Challenges / work in progress:}
+  \begin{itemize}
+  \item<4->
+    Long FFC compilation times
+  \item<5->
+    Preconditioning
+  \end{itemize}
+
+\end{frame}
+
+%Get from Gabriel: Newton vs fixed-point
+%Get from Gabriel: timings for compiling
+%Get from Gabriel: new plot with LaTeX for fig 13 and slopes
+%Marie: name of x

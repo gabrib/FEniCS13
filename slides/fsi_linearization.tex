@@ -1,0 +1,26 @@
+\begin{frame}
+  \frametitle{Linearization of the FSI problem}
+  
+  Two challenges:
+  \begin{itemize}
+  \item<2->
+    Derivative of fluid equation with respect to geometry?
+      \begin{equation*}
+      \begin{array}{rlll}
+        \ddt (\rho u) - \divsigmaFup & = & \fF &\quad \textrm{in}\;
+       \alert{\oFt}\\
+        \divuF & =& 0 &\quad  \textrm{in}\; \alert{\oFt}
+      \end{array}
+    \end{equation*}
+  \item<3->
+  Linearization of essential BCs
+  \begin{equation*} 
+    \uF = \uS
+    \quad \text{ on } \alert{\gammaFS}
+   \end{equation*}
+  \begin{equation*}
+    \dM = \dStruc
+    \quad \text{ on } \alert{\gammaFS}
+  \end{equation*}
+  \end{itemize}
+\end{frame}

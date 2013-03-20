@@ -1,0 +1,25 @@
+\begin{frame} 
+  \frametitle{Interface conditions: How to linearize?}
+\begin{figure}[htbp]
+  \def\svgwidth{0.3\columnwidth}
+  \input{pdf/fsi_interface.pdf_tex}
+\end{figure}
+  
+  Stress continuity:
+  \begin{equation*} \label{eq:continuity,stress}
+    \SigmaS \cdot N = \SigmaF \cdot N
+    \quad \text{ on } \GammaFS
+  \end{equation*}
+
+  Kinematic continuity:
+  \begin{equation*} \label{eq:continuity, kinematic}
+    \UF = \PS
+    \quad \text{ on } \GammaFS
+  \end{equation*}
+
+  Domain continuity:
+  \begin{equation*} \label{eq:continuity, domain}
+    \DM = \DS
+    \quad \text{ on } \GammaFS
+  \end{equation*}
+\end{frame}

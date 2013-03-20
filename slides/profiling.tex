@@ -1,0 +1,22 @@
+\begin{frame}
+  \frametitle{Break-down of run-time}
+
+  \small
+  \begin{tabular}{|l|l|r|r|r|}
+    \hline
+    \bf{Problem} & \bf{Routine} & \bf{Calls} & \bf{Time} (s) & \\
+    \hline
+    \bf{Analytic problem} &Jacobian assembly&   28 & 83.9s & \textbf{90\%} \\
+    mesh size = 231        &Linear solve&        28 & 1.86s & 2\% \\
+    time steps = 10       &Residual assembly&   38 & 0.915s  & 1\% \\
+    &&&&\\
+    \hline
+    \bf{Blood vessel} &Jacobian assembly&   343 & 2980s & \textbf{81\%} \\
+    mesh size = 1271    &Linear solve&        343 & 254s & 18\% \\
+    time steps = 140    &Residual assembly&   483 & 64.1s &  1\%  \\
+    &&&&\\
+    \hline
+  \end{tabular}
+  \normalsize
+
+\end{frame}

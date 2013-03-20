@@ -1,0 +1,25 @@
+\begin{frame}
+  \frametitle{Arbitrary Lagrangian-Eulerian framework}
+
+\begin{figure}[htbp]
+  \def\svgwidth{0.7\columnwidth}
+  \input{pdf/ALE_Formulation.pdf_tex}
+\end{figure}
+
+ \uncover<2->{
+ ALE time derivative:
+ \begin{equation*}
+  \ddt (\rho u) = \dot{\rho u} + \rho \; (\grad u \cdotp (u- \alert{\dotUM}) )
+ \end{equation*}
+ }
+
+\uncover<3->{
+ ALE fluid equation:
+\begin{equation*}
+    \begin{aligned}
+         \rhoF(\dotuF + \graduF \cdot (\uF - \alert{\dotUM})) - \divsigmaFup &= \fF \quad &\textrm{in}\; \oFt \\
+         \divuF &= 0 \quad  &\textrm{in} \;\oFt
+       \end{aligned}
+     \end{equation*}
+     }
+\end{frame}

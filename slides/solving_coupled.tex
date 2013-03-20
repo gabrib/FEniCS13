@@ -1,0 +1,31 @@
+\begin{frame}
+  \frametitle{Solving the FSI problem}
+
+  Issues:
+  \begin{itemize}
+  \item<2->
+    Continuum mechanics formulation
+  \item<3->
+    Partitioned vs monolithic
+  \item<4->
+    Fixed-pointed vs Newton
+  \item<6->
+    Approximation of the Jacobian
+  
+  \end{itemize}
+
+  \bigskip
+
+  \uncover<7->{In this work we:}
+
+  \begin{itemize}
+  \item<7->
+    derive a \textbf{Newton's} method with exact Jacobians for FSI problems
+    using the \textbf{arbitrary Lagrangian Eulerian} formulation
+  \item<8->
+    implement a \textbf{monolithic} solver in Python (using FEniCS)
+  \item<9->
+    investigate various \textbf{optimizations} and \textbf{simplifications}
+  \end{itemize}
+
+\end{frame}

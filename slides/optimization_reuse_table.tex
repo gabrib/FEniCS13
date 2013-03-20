@@ -1,0 +1,24 @@
+\begin{frame}
+  \frametitle{Effect of Jacobian reuse}
+
+  \small
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \bf{Problem} & \bf{Routine} & \bf{Calls}  & \\
+    \hline
+    \bf{Analytic problem} &Jacobian assembly&     1 (-27)               & -95 \% \\
+    mesh size = 231        &Linear solve&        51 ({\color{red}+23})  & -96\% \\
+    time steps = 10        &Residual assembly&   61 ({\color{red}+23})  & {\color{red}+54\%} \\
+                           &\bf{Total Runtime:} &                       & \bf{-93} \% \\
+
+    &&&\\
+    \hline
+    \bf{Blood vessel}&Jacobian assembly&   25 (-308) & -93 \% \\
+    mesh size = 1271    &Linear solve&        1287 ({\color{red}+944}) & -92 \% \\
+    time steps = 140    &Residual assembly&   1427 ({\color{red}+944}) & {\color{red}+192}\%  \\
+                        &\bf{Total}       &                            & \bf{-91 \%} \\
+    \hline
+  \end{tabular}
+  \normalsize
+
+\end{frame}

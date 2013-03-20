@@ -1,0 +1,25 @@
+\begin{frame}
+  \frametitle{Navier--Stokes pulled back to reference domain}
+
+  \begin{itemize}
+  \item
+    Equation:
+    \small
+    \begin{equation*}
+      \begin{split}
+        \rhoF\JM(\dotUF + \GradUF\cdot \FM^{-1}\cdot (\UF-\dotUM ))
+        - \Divv \; \SigmaF
+        & = B_{_{F}} \\
+        \Divv(\JM\;\FM^{-1}\cdot\UF) & = 0
+      \end{split}
+    \end{equation*}
+    \normalsize
+  \item<2->
+    Pulled-back fluid stress:
+    \begin{equation*}
+      \SigmaF = \JM \left(\muF(\GradUF \cdot \FM^{-1} + \FM^{-\top}\cdot 
+      \GradUF ^{\top})  - \PF I \right) \cdot\FM^{-\top}
+    \end{equation*}
+  \end{itemize}
+
+\end{frame}

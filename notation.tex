@@ -1,0 +1,275 @@
+%% RHS in weak form
+\newcommand{\rhs}{L}
+
+%% primal variables
+\newcommand{\uF}{u_{_{F}}}
+\newcommand{\UF}{U_{_{F}}}
+\newcommand{\pF}{p_{_{F}}}
+\newcommand{\PF}{P_{_{F}}}
+\newcommand{\uS}{u_{_{S}}}
+\newcommand{\US}{D_{_{S}}}
+\newcommand{\PS}{U_{_{S}}}
+\newcommand{\uM}{u_{_{M}}}
+\newcommand{\UM}{D_{_{M}}}
+\newcommand{\PM}{P_{_{M}}}
+\newcommand{\DM}{D_{_{M}}}
+\newcommand{\dM}{d_{_{M}}}
+\newcommand{\DS}{D_{_{S}}}
+\newcommand{\dStruc}{d_{_{S}}}
+
+%% test functions
+\newcommand{\vF}{v_{_{F}}}
+\newcommand{\dotvF}{\dot{v}_{_{F}}}
+\newcommand{\qF}{q_{_{F}}}
+\newcommand{\vS}{v_{_{S}}}
+\newcommand{\dotvS}{\dot{v}_{_{S}}}
+\newcommand{\qS}{w_{_{S}}}
+\newcommand{\dotqS}{\dot{q}_{_{S}}}
+\newcommand{\vM}{v_{_{M}}}
+\newcommand{\dotvM}{\dot{v}_{_{M}}}
+\newcommand{\qM}{q_{_{M}}}
+
+%% Lagrange multipliers
+\newcommand{\chiF}{\chi_{_{F}}}
+\newcommand{\chiM}{\chi_{_{M}}}
+\newcommand{\tauF}{\tau_{_{F}}}
+\newcommand{\tauM}{\tau_{_{M}}}
+
+%% grad, Grad
+\newcommand{\grad}{\textrm{grad}\:} %% Used by SIAM (not used anyway)
+%\newcommand{\Grad}{\textrm{Grad}\:}
+\newcommand{\graduF}{\textrm{grad}\:u_{_{F}}}
+\newcommand{\GradUF}{\textrm{Grad}\:U_{_{F}}}
+\newcommand{\graduS}{\textrm{grad}\:u_{_{S}}}
+\newcommand{\GradUS}{\textrm{Grad}\:U_{_{S}}}
+\newcommand{\graduM}{\textrm{grad}\:u_{_{M}}}
+\newcommand{\GradUM}{\textrm{Grad}\:U_{_{M}}}
+\newcommand{\sgrad}{\textrm{grad}^{\bf{s}}}
+\newcommand{\sGrad}{\textrm{Grad}^{\bf{s}}}
+
+%% divergence
+\newcommand{\divv}{\textrm{div}\:}
+%\newcommand{\Div}{\textrm{Div}\;}
+\newcommand{\divuF}{\textrm{div}\:u_{_{F}}}
+\newcommand{\DivuF}{\textrm{Div}\:U_{_{F}}}
+\newcommand{\DivUM}{\textrm{Div}\:U_{_{M}}}
+
+%% time derivatives
+\newcommand{\dotuF}{\dot{u}_{_{F}}}
+\newcommand{\dotUF}{\dot{U}_{_{F}}}
+\newcommand{\dotUS}{\dot{U}_{_{S}}}
+\newcommand{\dotPS}{\dot{P}_{_{S}}}
+\newcommand{\dotUM}{\dot{D}_{_{M}}}
+\newcommand{\ddotUS}{\ddot{D}_{_{S}}}
+\newcommand{\dotDS}{\ddot{U}_{_{S}}}
+
+%% sigma
+\newcommand{\sigmaF}{\sigma_{_{F}}}
+\newcommand{\sigmaFup}{\sigma_{_{F}}(u_{_{F}},p_{_{F}})}
+\newcommand{\sigmaFuph}{\sigma_{_{F}}(u_{_{F}}^h,p_{_{F}}^h)}
+\newcommand{\divsigmaF}{\textrm{div}\:\sigma_{_{F}}}
+\newcommand{\divsigmaFup}{\textrm{div}\:\sigma_{_{F}}(u_{_{F}},p_{_{F}})}
+\newcommand{\nF}{n_{_{F}}}
+\newcommand{\NF}{N_{_{F}}}
+\newcommand{\SigmaF}{\Sigma_{_{F}}}
+\newcommand{\SigmaFUP}{\Sigma_{_{F}}(U_{_{F}}, P_{_{F}})}
+\newcommand{\DivSigmaFUP}{\textrm{Div}\:\Sigma_{_{F}}(U_{_{F}}, P_{_{F}})}
+\newcommand{\SigmaS}{\Sigma_{_{S}}}
+\newcommand{\SigmaSU}{\Sigma_{_{S}}(D_{_{S}})}
+\newcommand{\DivSigmaSU}{\textrm{Div}\:\Sigma_{_{S}}(D_{_{S}})}
+\newcommand{\NS}{N_{_{S}}}
+\newcommand{\SigmaM}{\Sigma_{_{M}}}
+\newcommand{\SigmaMU}{\Sigma_{_{M}}(U_{_{M}})}
+\newcommand{\DivSigmaMU}{\textrm{Div}\:\Sigma_{_{M}}(U_{_{M}})}
+\newcommand{\NM}{N_{_{M}}}
+
+%% mappings
+\newcommand{\PhiF}{\Phi_{_{F}}}
+\newcommand{\PhiS}{\Phi_{_{S}}}
+\newcommand{\PhiM}{\Phi_{_{M}}}
+
+%% F, J
+\newcommand{\FF}{{F}_{_{F}}}
+\newcommand{\JF}{{J}_{_{F}}}
+\newcommand{\FS}{{F}_{_{S}}}
+\newcommand{\JS}{{J}_{_{S}}}
+\newcommand{\FM}{{F}_{_{M}}}
+\newcommand{\JM}{{J}_{_{M}}}
+\newcommand{\ES}{{E}_{_{S}}}
+\newcommand{\barFS}{\tilde{\mathbb{F}}_{_{S}}}
+\newcommand{\barFM}{\tilde{\mathbb{F}}_{_{M}}}
+
+%% domains, boundaries
+\newcommand{\oFt}{\omega_{_{F}}(t)}
+\newcommand{\oF}{\omega_{_{F}}}
+\newcommand{\oSt}{\omega_{_{S}}(t)}
+\newcommand{\OF}{\Omega_{_{F}}}
+\newcommand{\OS}{\Omega_{_{S}}}
+\newcommand{\OM}{\Omega_{_{M}}}
+\newcommand{\gammaFS}{\gamma_{_{FS}}(t)}
+\newcommand{\gammaFN}{\gamma_{_{F,N}}(t)}
+\newcommand{\gammaFD}{\gamma_{_{F,D}}(t)}
+\newcommand{\GammaFS}{\Gamma_{_{FS}}}
+\newcommand{\GammaSD}{\Gamma_{_{S,D}}}
+\newcommand{\GammaSN}{\Gamma_{_{S,N}}}
+\newcommand{\GammaFD}{\Gamma_{_{F,D}}}
+\newcommand{\GammaFN}{\Gamma_{_{F,N}}}
+\newcommand{\GammaMD}{\Gamma_{_{M,D}}}
+
+%% constants
+\newcommand{\rhoF}{\rho_{_{F}}}
+\newcommand{\rhoS}{\rho_{_{S}}}
+\newcommand{\muS}{\mu_{_{S}}}
+\newcommand{\muF}{\mu_{_{F}}}
+\newcommand{\muM}{\mu_{_{M}}}
+\newcommand{\lambdaS}{\lambda_{_{S}}}
+\newcommand{\lambdaM}{\lambda_{_{M}}}
+\newcommand{\alphaM}{\alpha_{_{M}}}
+
+%% forms
+\newcommand{\aF}{a_{_{F}}}
+\newcommand{\AF}{R_{_{F}}}
+\newcommand{\LF}{L_{_{F}}}
+\newcommand{\AS}{R_{_{S}}}
+%%\newcommand{\AM}{A_{_{M}} %% SIAM fix
+\newcommand{\lF}{l_{_{F}}}
+\newcommand{\LS}{L_{_{S}}}
+\newcommand{\LM}{L_{_{M}}}
+
+%% dual forms
+\newcommand{\AFF}{A_{_{FF}}}
+\newcommand{\AFS}{A_{_{FS}}}
+\newcommand{\AFM}{A_{_{FM}}}
+\newcommand{\ASS}{A_{_{SS}}}
+\newcommand{\ASF}{A_{_{SF}}}
+\newcommand{\ASM}{A_{_{SM}}}
+\newcommand{\AMM}{A_{_{MM}}}
+\newcommand{\AMF}{A_{_{MF}}}
+%%\newcommand{\AMS}{A_{_{MS}}} %% SIAM fix
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\MF}{\mathcal{M}_{_{F}}}
+\newcommand{\MS}{\mathcal{M}_{_{S}}}
+\newcommand{\MM}{\mathcal{M}_{_{M}}}
+\newcommand{\bU}{\textbf{U}}
+\newcommand{\bv}{\textbf{v}}
+\newcommand{\be}{\textbf{e}}
+\newcommand{\barUF}{\tilde{U}_{_{F}}}
+\newcommand{\barPF}{\tilde{P}_{_{F}}}
+\newcommand{\barUS}{\tilde{U}_{_{S}}}
+\newcommand{\barUM}{\tilde{U}_{_{M}}}
+
+% SIAM fixes
+\newcommand{\AAM}{R_{_{M}}}
+\newcommand{\AAMS}{A_{_{MS}}}
+
+%% dual solutions
+\newcommand{\ZUF}{Z_{_{F}}}
+\newcommand{\ZPF}{Y_{_{F}}}
+\newcommand{\ZUS}{Z_{_{S}}}
+\newcommand{\ZPS}{Y_{_{S}}}
+\newcommand{\ZUM}{Z_{_{M}}}
+\newcommand{\ZPM}{Y_{_{M}}}
+
+%% function Spaces
+\newcommand{\VF}{V_{_{F}}}
+\newcommand{\QF}{Q_{_{F}}}
+\newcommand{\VS}{V_{_{S}}}
+\newcommand{\QS}{W_{_{S}}}
+\newcommand{\VM}{V_{_{M}}}
+\newcommand{\QM}{Q_{_{M}}}
+\newcommand{\hatVF}{\hat{V}_{_{F}}}
+\newcommand{\hatQF}{\hat{Q}_{_{F}}}
+\newcommand{\hatVS}{\hat{V}_{_{S}}}
+\newcommand{\hatQS}{\hat{Q}_{_{S}}}
+\newcommand{\hatVM}{\hat{V}_{_{M}}}
+\newcommand{\hatQM}{\hat{Q}_{_{M}}}
+
+%% RHS
+\newcommand{\fF}{b_{_{F}}}
+\newcommand{\fS}{B_{_{S}}}
+
+% dx etc
+\newcommand{\trace}{\textrm{tr}}
+\newcommand{\rmd}{\textrm{d}}
+\newcommand{\rmD}{\textrm{D}}
+%\newcommand{\dx}{\;\textrm{d}x}
+%\newcommand{\dX}{\;\textrm{d}X}
+%\newcommand{\ds}{\;\textrm{d}s}
+%\newcommand{\dS}{\;\textrm{d}S}
+\newcommand{\dt}{\;\textrm{d}t}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\ddt}{\frac{d}{dt}}
+
+%% linearization
+
+%% FLUID variables
+\newcommand{\Ddv}{D_{{\delta v}}}
+\newcommand{\Dd}{D_{_{\delta U}}}
+\newcommand{\dU}{\delta U}
+\newcommand{\DdUF}{D{_{\delta{U_{F}}}}}
+\newcommand{\DdPF}{D{_{\delta P_{F}}}}
+\newcommand{\dUF}{\delta U_{_{F}}}
+\newcommand{\dPF}{\delta P_{_{F}}}
+\newcommand{\ddotUF}{\delta\dot{U}_{_{F}}}
+\newcommand{\dGradUF}{\textrm{Grad}\;\delta U_{_{F}}}
+
+%% STRUCTURE variables
+\newcommand{\DdUS}{D{_{\delta U_{S}}}}
+\newcommand{\DdPS}{D{_{\delta P_{S}}}}
+\newcommand{\dUS}{\delta U_{_{S}}}
+\newcommand{\dPS}{\delta P_{_{S}}}
+\newcommand{\dGradUS}{\textrm{Grad}\;\delta U_{_{S}}}
+\newcommand{\ddotPS}{\delta\dot{P}_{_{S}}}
+
+%% MESH variables
+\newcommand{\DdUM}{D{_{\delta U_{M}}}}
+\newcommand{\DdPM}{D{_{\delta P_{M}}}}
+\newcommand{\dUM}{\delta U_{_{M}}}
+\newcommand{\dPM}{\delta P_{_{M}}}
+\newcommand{\dGradUM}{\textrm{Grad}\;\delta U_{_{M}}}
+\newcommand{\ddotUM}{\delta\dot{U}_{_{M}}}
+
+%% inner products
+\newcommand{\il}{\langle}
+\newcommand{\ir}{\rangle}
+
+%% mesh notation
+\newcommand{\T}{\mathcal{T}}
+
+%% errors
+\newcommand{\eh}{u^h-u}
+\newcommand{\ehk}{u^{hk} - u}
+
+
+% misc
+%\newcommand{\R}{\mathcal{R}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Uvec}{\zeta^n}
+\newcommand{\stab}{\mathcal{S}}
+\newcommand{\uu}{\hat{u}}
+\newcommand{\vv}{\hat{v}}
+\newcommand{\UU}{\hat{U}}
+\newcommand{\zz}{\hat{z}}
+\newcommand{\ZZ}{\hat{Z}}
+\newcommand{\VV}{\hat{V}}
+\newcommand{\WW}{\hat{W}}
+\newcommand{\ee}{\hat{e}}
+\newcommand{\subdt}{\textrm{d}_t}
+\newcommand{\ddotuS}{\ddot{u}_{_{S}}}
+\newcommand{\Divv}{\textrm{Div}\;}
+\newcommand{\sigmaS}{\sigma_{_{S}}}
+\newcommand{\bff}{b_{_{F}}}
+\newcommand{\BS}{B_{_{S}}}
+\newcommand{\oS}{\omega_{_{S}}}
+\newcommand{\cgone}{$\mathrm{cG}(1)$}
+%\newcommand{\foralls}{\forall\,}
+\newcommand{\apost}{\emph{a~posteriori}}
+\newcommand{\apriori}{\emph{a~priori}}
+\newcommand{\RR}{\mathbb{R}}
+%\newcommand{\inner}[2]{\langle #1 ,\; #2 \rangle}
+\newcommand{\dinner}[2]{\langle\!\langle\!\langle #1 ,\; #2 \rangle\!\rangle\!\rangle}
+\newcommand{\dnorm}[1]{|\!|\!|#1|\!|\!|}
+\newcommand{\cgq}{$\mathrm{cG}(q)$}
+\newcommand{\dgq}{$\mathrm{dG}(q)$}
+%\newcommand{\babuska}{Babu\v{s}ka}
